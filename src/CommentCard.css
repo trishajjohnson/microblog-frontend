@@ -1,0 +1,19 @@
+.comment {
+    position: relative;
+}
+
+.comment-body {
+    /* margin-right: 10px !important; */
+    width: 80%;
+}
+
+.comment-end {
+    position: absolute;
+    right: 3em;
+    top: 45%;
+    text-align: right;
+}
+
+.remove-btn:hover {
+    color: black !important;
+}

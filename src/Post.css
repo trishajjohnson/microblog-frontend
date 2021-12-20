@@ -1,0 +1,22 @@
+.Post {
+    position: relative;
+}
+
+.Post-right {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    text-align: right;
+  }
+  
+.Post-right i {
+margin-left: 1em;
+} 
+
+.comments-section {
+    width: 50%;
+}
+
+.form {
+    width: 75%;
+}
