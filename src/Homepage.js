@@ -26,7 +26,7 @@ function Homepage() {
             fetchTitle();
         }
 
-    }, [dispatch, isLoading]);
+    }, [dispatch, isLoading, titles]);
 
 
     function vote(direction, id) {

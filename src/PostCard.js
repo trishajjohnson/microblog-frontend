@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { updateVoteInApi } from './actions/posts';
-import { useDispatch } from 'react-redux';
 
 function PostCard({post, id, vote}) {
-    // const dispatch = useDispatch();
     console.log("post", post)
     console.log("id", id)
 

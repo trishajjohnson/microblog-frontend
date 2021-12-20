@@ -40,10 +40,11 @@ export default function rootReducer(state={}, action) {
         }
 
         case REMOVE_COMMENT: { 
-            let posts = { ...state }; 
-            delete posts[action.postId].comments[action.commentId];
-            
-            return {...state, [action.postId]: { ...state[action.postId], comments: [ ...state[action.postId].comments ] }};
+            let post = state[action.postId]; 
+            const comments = post.comments.filter(comment => comment.id !== +action.commentId);
+            post.comments = comments;
+
+            return {...state, [action.postId]: { ...post }};
         }
 
         case UPDATE_VOTES: { 

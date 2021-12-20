@@ -9,7 +9,6 @@ import CommentList from './CommentList';
  
 
 function Post() {
-    // const { postId } = useParams();
     const postId = Number(useParams().postId);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -17,10 +16,10 @@ function Post() {
     const [isEditing, setIsEditing] = useState(false);
     const [comment, setComment] = useState();
     const post = useSelector(st => st.posts[postId]);
-    
+
 
     useEffect(function() {
-        async function getPostOnMount() {
+        async function getPostOnMount() { 
             dispatch(getPostFromApi(postId));
         }
         

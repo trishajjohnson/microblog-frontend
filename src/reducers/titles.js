@@ -2,7 +2,8 @@ import {
     ADD_POST, 
     EDIT_POST, 
     REMOVE_POST, 
-    GET_TITLES 
+    GET_TITLES,
+    UPDATE_VOTES 
 } from '../actions/types';
 
 
@@ -33,6 +34,12 @@ export default function rootReducer(state= [], action) {
         case REMOVE_POST: { 
             
             return state.filter(title => title.id !== action.postId);
+        }
+
+        case UPDATE_VOTES: { 
+            
+            return state.map(
+                title => title.id === action.postId ? { ...title, votes: action.votes } : title);
         }
 
         default:
